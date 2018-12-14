@@ -1,7 +1,0 @@
-buzzer-- 蜂鸣器
-ITEMP-- 内部温度
-LCD_12864 --LCD显示
-Menu  ---菜单系统
-CH340----USB转TTL（串口）
-MiniBalance----串口上位机波形显示
-DHT11-----DHT11温湿度检测
