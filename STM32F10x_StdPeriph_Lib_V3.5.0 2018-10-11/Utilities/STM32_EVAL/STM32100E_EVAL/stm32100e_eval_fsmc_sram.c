@@ -90,7 +90,7 @@
   */ 
 
 /**
-  * @brief  Configures the FSMC and GPIOs to interface with the SRAM memory.
+  * @brief  配置FSMC和GPIO以与SRAM存储器连接。
   *         必须在SRAM上执行任何写/读操作之前调用此函数。
   * @param  None 
   * @retval None
@@ -104,8 +104,8 @@ void SRAM_Init(void)
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD | RCC_APB2Periph_GPIOG | RCC_APB2Periph_GPIOE |
                          RCC_APB2Periph_GPIOF, ENABLE);
   
-/*-- GPIO Configuration ------------------------------------------------------*/
-  /*!< SRAM Data lines configuration */
+/*-- GPIO配置 ------------------------------------------------------*/
+  /*!< SRAM数据线配置 */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_8 | GPIO_Pin_9 |
                                 GPIO_Pin_10 | GPIO_Pin_14 | GPIO_Pin_15;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
@@ -117,7 +117,7 @@ void SRAM_Init(void)
                                 GPIO_Pin_15;
   GPIO_Init(GPIOE, &GPIO_InitStructure);
   
-  /*!< SRAM Address lines configuration */
+  /*!< SRAM地址线配置 */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | 
                                 GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_12 | GPIO_Pin_13 | 
                                 GPIO_Pin_14 | GPIO_Pin_15;
@@ -130,19 +130,19 @@ void SRAM_Init(void)
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13; 
   GPIO_Init(GPIOD, &GPIO_InitStructure);
    
-  /*!< NOE and NWE configuration */  
+  /*!< NOE和NWE配置 */  
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 |GPIO_Pin_5;
   GPIO_Init(GPIOD, &GPIO_InitStructure);
   
-  /*!< NE3 configuration */
+  /*!< NE3配置 */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10; 
   GPIO_Init(GPIOG, &GPIO_InitStructure);
   
-  /*!< NBL0, NBL1 configuration */
+  /*!< NBL0，NBL1配置 */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1; 
   GPIO_Init(GPIOE, &GPIO_InitStructure); 
   
-/*-- FSMC Configuration ------------------------------------------------------*/
+/*-- FSMC配置 ------------------------------------------------------*/
   p.FSMC_AddressSetupTime = 0;
   p.FSMC_AddressHoldTime = 0;
   p.FSMC_DataSetupTime = 3;
@@ -169,36 +169,34 @@ void SRAM_Init(void)
 
   FSMC_NORSRAMInit(&FSMC_NORSRAMInitStructure); 
 
-  /*!< Enable FSMC Bank1_SRAM Bank */
+  /*!< 启用FSMC Bank1_SRAM Bank */
   FSMC_NORSRAMCmd(FSMC_Bank1_NORSRAM3, ENABLE);  
 }
 
 /**
-  * @brief  Writes a Half-word buffer to the FSMC SRAM memory. 
-  * @param  pBuffer : pointer to buffer. 
-  * @param  WriteAddr : SRAM memory internal address from which the data will be 
-  *         written.
-  * @param  NumHalfwordToWrite : number of half-words to write. 
+  * @brief  将半字缓冲区写入FSMC SRAM存储器。 
+  * @param  pBuffer : 指向缓冲区的指针
+  * @param  WriteAddr : SRAM存储器内部地址，用于写入数据。
+  * @param  NumHalfwordToWrite : 要写的半字数。 
   * @retval None
   */
 void SRAM_WriteBuffer(uint16_t* pBuffer, uint32_t WriteAddr, uint32_t NumHalfwordToWrite)
 {
   for(; NumHalfwordToWrite != 0; NumHalfwordToWrite--) /*!< while there is data to write */
   {
-    /*!< Transfer data to the memory */
+    /*!< 将数据传输到内存 */
     *(uint16_t *) (Bank1_SRAM3_ADDR + WriteAddr) = *pBuffer++;
     
-    /*!< Increment the address*/  
+    /*!< 增加地址*/  
     WriteAddr += 2;
   }   
 }
 
 /**
-  * @brief  Reads a block of data from the FSMC SRAM memory.
-  * @param  pBuffer : pointer to the buffer that receives the data read from the 
-  *         SRAM memory.
-  * @param  ReadAddr : SRAM memory internal address to read from.
-  * @param  NumHalfwordToRead : number of half-words to read.
+  * @brief  从FSMC SRAM存储器读取数据块。
+  * @param  pBuffer : 指向缓冲区的指针，该缓冲区接收从SRAM存储器读取的数据。
+  * @param  ReadAddr : SRAM存储器内部地址读取。
+  * @param  NumHalfwordToRead : 要读的半字数。
   * @retval None
   */
 void SRAM_ReadBuffer(uint16_t* pBuffer, uint32_t ReadAddr, uint32_t NumHalfwordToRead)
