@@ -1,0 +1,69 @@
+*** Creating Trace Output File '.\Obj\BOOT_FLASH.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\stm32f10x_it.o"'
+### List of Objects: adding '".\obj\main.o"'
+### List of Objects: adding '".\obj\menu.o"'
+### List of Objects: adding '".\obj\calendar.o"'
+### List of Objects: adding '".\obj\lcd.o"'
+### List of Objects: adding '".\obj\hw_config.o"'
+### List of Objects: adding '".\obj\usb_desc.o"'
+### List of Objects: adding '".\obj\usb_istr.o"'
+### List of Objects: adding '".\obj\usb_prop.o"'
+### List of Objects: adding '".\obj\usb_pwr.o"'
+### List of Objects: adding '".\obj\i2s_codec.o"'
+### List of Objects: adding '".\obj\waveplayer.o"'
+### List of Objects: adding '".\obj\fsmc_nor.o"'
+### List of Objects: adding '".\obj\lowpower.o"'
+### List of Objects: adding '".\obj\tsensor.o"'
+### List of Objects: adding '".\obj\mass_storage.o"'
+### List of Objects: adding '".\obj\fsmc_nand.o"'
+### List of Objects: adding '".\obj\mass_mal.o"'
+### List of Objects: adding '".\obj\memory.o"'
+### List of Objects: adding '".\obj\nand_if.o"'
+### List of Objects: adding '".\obj\scsi_data.o"'
+### List of Objects: adding '".\obj\sdcard.o"'
+### List of Objects: adding '".\obj\usb_bot.o"'
+### List of Objects: adding '".\obj\usb_endp.o"'
+### List of Objects: adding '".\obj\usb_scsi.o"'
+### List of Objects: adding '".\obj\smartcard.o"'
+### List of Objects: adding '".\obj\stm32f10x_usart.o"'
+### List of Objects: adding '".\obj\stm32f10x_tim.o"'
+### List of Objects: adding '".\obj\stm32f10x_bkp.o"'
+### List of Objects: adding '".\obj\stm32f10x_exti.o"'
+### List of Objects: adding '".\obj\stm32f10x_gpio.o"'
+### List of Objects: adding '".\obj\stm32f10x_i2c.o"'
+### List of Objects: adding '".\obj\stm32f10x_lib.o"'
+### List of Objects: adding '".\obj\stm32f10x_nvic.o"'
+### List of Objects: adding '".\obj\stm32f10x_pwr.o"'
+### List of Objects: adding '".\obj\stm32f10x_rcc.o"'
+### List of Objects: adding '".\obj\stm32f10x_rtc.o"'
+### List of Objects: adding '".\obj\stm32f10x_spi.o"'
+### List of Objects: adding '".\obj\stm32f10x_systick.o"'
+### List of Objects: adding '".\obj\stm32f10x_flash.o"'
+### List of Objects: adding '".\obj\stm32f10x_fsmc.o"'
+### List of Objects: adding '".\obj\stm32f10x_sdio.o"'
+### List of Objects: adding '".\obj\stm32f10x_dma.o"'
+### List of Objects: adding '".\obj\stm32f10x_adc.o"'
+### List of Objects: adding '".\obj\usb_regs.o"'
+### List of Objects: adding '".\obj\usb_core.o"'
+### List of Objects: adding '".\obj\usb_init.o"'
+### List of Objects: adding '".\obj\usb_int.o"'
+### List of Objects: adding '".\obj\usb_mem.o"'
+### List of Objects: adding '".\obj\cortexm3_macro.o"'
+### List of Objects: adding '".\obj\stm32f10x_vector.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\obj\stm32f10x_it.o" ".\obj\main.o" ".\obj\menu.o" ".\obj\calendar.o" ".\obj\lcd.o" ".\obj\hw_config.o" ".\obj\usb_desc.o" ".\obj\usb_istr.o" ".\obj\usb_prop.o" ".\obj\usb_pwr.o" ".\obj\i2s_codec.o" ".\obj\waveplayer.o" ".\obj\fsmc_nor.o" ".\obj\lowpower.o" ".\obj\tsensor.o" ".\obj\mass_storage.o" ".\obj\fsmc_nand.o" ".\obj\mass_mal.o" ".\obj\memory.o" ".\obj\nand_if.o" ".\obj\scsi_data.o" ".\obj\sdcard.o" ".\obj\usb_bot.o" ".\obj\usb_endp.o" ".\obj\usb_scsi.o" ".\obj\smartcard.o" ".\obj\stm32f10x_usart.o" ".\obj\stm32f10x_tim.o" ".\obj\stm32f10x_bkp.o" ".\obj\stm32f10x_exti.o" ".\obj\stm32f10x_gpio.o" ".\obj\stm32f10x_i2c.o" ".\obj\stm32f10x_lib.o" ".\obj\stm32f10x_nvic.o" ".\obj\stm32f10x_pwr.o" ".\obj\stm32f10x_rcc.o" ".\obj\stm32f10x_rtc.o" ".\obj\stm32f10x_spi.o" ".\obj\stm32f10x_systick.o" ".\obj\stm32f10x_flash.o" ".\obj\stm32f10x_fsmc.o" ".\obj\stm32f10x_sdio.o" ".\obj\stm32f10x_dma.o" ".\obj\stm32f10x_adc.o" ".\obj\usb_regs.o" ".\obj\usb_core.o" ".\obj\usb_init.o" ".\obj\usb_int.o" ".\obj\usb_mem.o" ".\obj\cortexm3_macro.o" ".\obj\stm32f10x_vector.o" --library_type=microlib --strict --scatter ".\Obj\BOOT_FLASH.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\List\BOOT_FLASH.map" -o ".\Obj\BOOT_FLASH.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Obj\BOOT_FLASH.axf'
+### ADS-LD Command File: '.\Obj\BOOT_FLASH.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Obj\BOOT_FLASH.lnp', Handle=0x000003A0
+### Writing '.lnp' file
+### ADS-LD Command file '.\Obj\BOOT_FLASH.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
